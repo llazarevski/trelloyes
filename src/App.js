@@ -9,8 +9,8 @@ class App extends Component {
       allCards: {},
     }
   };
-  handleDeleteItem(cards){
-    console.log('handle delete item called', {cards})
+  handleDeleteItem(title){
+    console.log('handle delete item called', {title})
   }
   handleAddItem(){
     console.log('handle add item called')
