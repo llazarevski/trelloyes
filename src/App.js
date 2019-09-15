@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import List from './List'
 import './App.css';
 
+function omit(obj, keyToOmit) {
+  return Object.entries(obj).reduce(
+    (newObj, [key, value]) =>
+        key === keyToOmit ? newObj : {...newObj, [key]: value},
+    {}
+  );
+}
+
 class App extends Component {
   state = {
     store: {
@@ -9,14 +17,6 @@ class App extends Component {
       allCards: {},
     }
   };
-
-  function omit(obj, keyToOmit) {
-    return Object.entries(obj).reduce(
-      (newObj, [key, value]) =>
-          key === keyToOmit ? newObj : {...newObj, [key]: value},
-      {}
-    );
-  }
   
     handleDeleteItem(cardIds) {
       console.log("handle delete item called", {cardIds}) 
