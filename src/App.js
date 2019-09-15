@@ -9,15 +9,17 @@ class App extends Component {
       allCards: {},
     }
   };
+
+  function omit(obj, keyToOmit) {
+    return Object.entries(obj).reduce(
+      (newObj, [key, value]) =>
+          key === keyToOmit ? newObj : {...newObj, [key]: value},
+      {}
+    );
+  }
   
-    handleDeleteItem(key) {
-      function omit(this.state.allCards, {key}) {
-        return Object.entries(obj).reduce(
-          (newObj, [key, value]) =>
-              key === keyToOmit ? newObj : {...newObj, [key]: value},
-          {}
-        );
-      }
+    handleDeleteItem(cardIds) {
+      console.log("handle delete item called", {cardIds}) 
       
     }
   

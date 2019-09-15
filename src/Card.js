@@ -5,7 +5,7 @@ export default function Card(props) {
   return (
     <div className='Card'>
       <button
-      onClick={() => props.onDeleteItem(props.key)}
+      onClick={() => props.onDeleteItem(props.cardIds)}
         type='button'
       >
         delete
