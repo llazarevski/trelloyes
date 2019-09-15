@@ -9,9 +9,18 @@ class App extends Component {
       allCards: {},
     }
   };
-  handleDeleteItem(title){
-    console.log('handle delete item called', {title})
-  }
+  
+    handleDeleteItem(key) {
+      function omit(this.state.allCards, {key}) {
+        return Object.entries(obj).reduce(
+          (newObj, [key, value]) =>
+              key === keyToOmit ? newObj : {...newObj, [key]: value},
+          {}
+        );
+      }
+      
+    }
+  
   handleAddItem(){
     console.log('handle add item called')
   }
