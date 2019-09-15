@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import List from './List'
 import './App.css';
+import Store from "./Store"
 
 function omit(obj, keyToOmit) {
   return Object.entries(obj).reduce(
@@ -12,10 +13,9 @@ function omit(obj, keyToOmit) {
 
 class App extends Component {
   state = {
-    store: {
-      lists: [],
-      allCards: {},
-    }
+    store: 
+      <Store />
+    
   };
   
     handleDeleteItem(cardIds) {
@@ -27,7 +27,7 @@ class App extends Component {
     console.log('handle add item called')
   }
   render() {
-    const { store } = this.props
+    const { store } = this.state
     return (
       <main className='App'>
         <header className='App-header'>
